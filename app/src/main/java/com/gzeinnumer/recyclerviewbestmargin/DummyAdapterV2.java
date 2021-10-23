@@ -42,18 +42,18 @@ public class DummyAdapterV2 extends RecyclerView.Adapter<DummyAdapterV2.MyHolder
         });
         IntConverterHelper helper = new IntConverterHelper(context);
         ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) holder.cardView.getLayoutParams();
-        int t = 32; //out
-        int h = 16; //out
-        int m = 10; //top-bottom
-        int l = m/2; //center
+        int first_last = 16;
+        int left_right = 16;
+        int space = 10;
+        int center = space/2;
         if (position == 0) {
-            layoutParams.setMargins(helper.intToDp(h), helper.intToDp(t), helper.intToDp(h), helper.intToDp(l));
+            layoutParams.setMargins(helper.intToDp(left_right), helper.intToDp(first_last), helper.intToDp(left_right), helper.intToDp(center));
             holder.cardView.setLayoutParams(layoutParams);
         } else if (position == size-1){
-            layoutParams.setMargins(helper.intToDp(h), helper.intToDp(l), helper.intToDp(h), helper.intToDp(t));
+            layoutParams.setMargins(helper.intToDp(left_right), helper.intToDp(center), helper.intToDp(left_right), helper.intToDp(first_last));
             holder.cardView.setLayoutParams(layoutParams);
         } else {
-            layoutParams.setMargins(helper.intToDp(h), helper.intToDp(l), helper.intToDp(h), helper.intToDp(l));
+            layoutParams.setMargins(helper.intToDp(left_right), helper.intToDp(center), helper.intToDp(left_right), helper.intToDp(center));
             holder.cardView.setLayoutParams(layoutParams);
         }
     }
