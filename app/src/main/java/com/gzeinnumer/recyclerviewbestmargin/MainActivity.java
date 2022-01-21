@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView rv = findViewById(R.id.rv);
 
-        DummyAdapterV2 adapter = new DummyAdapterV2(R.layout.item_rv, 20, position -> {
+        DummyAdapterV2 adapter = new DummyAdapterV2(R.layout.item_rv, 3, position -> {
 
         });
         rv.setAdapter(adapter);
